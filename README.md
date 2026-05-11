@@ -82,9 +82,10 @@ The key contribution of this project lies in the development of a unified multim
 
 ## 👨‍💻 **Author**
 
-Shanshiya E
-Srilekha B S
-Rudhuvarshan R
+Shanshiya E,
+Srilekha B S,
+Rudhuvarshan R 
+
 
 
 ## 📜 **License**
