@@ -1,0 +1,15 @@
+subject_id,true_label,prediction
+1009,dyslexic,control
+1033,control,control
+1038,dyslexic,dyslexic
+1058,control,control
+1160,control,control
+1169,control,control
+1174,dyslexic,control
+1189,control,control
+1284,control,control
+1314,control,control
+1345,control,control
+1350,dyslexic,dyslexic
+1398,control,control
+1693,dyslexic,dyslexic

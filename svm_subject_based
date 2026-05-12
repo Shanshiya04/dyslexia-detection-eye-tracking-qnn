@@ -1,0 +1,59 @@
+import pandas as pd
+import os
+
+# ==============================
+# FILE PATHS
+# ==============================
+svm_file = "svm_subject_predictions.csv"
+log_file = "logistic_subject_predictions.csv"
+cnn_file = "cnn_subject_predictions.csv"
+qnn_file = "qnn_subject_predictions.csv"
+
+label_file = r"C:\Users\ASUS\Sample\dyslexia_class_label.csv"
+
+# ==============================
+# LOAD FILES
+# ==============================
+svm = pd.read_csv(svm_file)
+log = pd.read_csv(log_file)
+cnn = pd.read_csv(cnn_file)
+qnn = pd.read_csv(qnn_file)
+labels = pd.read_csv(label_file)
+
+# ==============================
+# CLEAN SUBJECT IDs
+# ==============================
+svm["subject_id"] = svm["subject_id"].astype(str)
+log["subject_id"] = log["subject_id"].astype(str)
+cnn["subject_id"] = cnn["subject_id"].astype(str)
+qnn["subject_id"] = qnn["subject_id"].astype(str)
+labels["subject_id"] = labels["subject_id"].astype(str)
+
+# ==============================
+# RENAME COLUMNS
+# ==============================
+svm = svm.rename(columns={"prediction": "svm"})
+log = log.rename(columns={"prediction": "logistic"})
+cnn = cnn.rename(columns={"prediction": "resnet"})
+qnn = qnn.rename(columns={"prediction": "qnn"})
+labels = labels.rename(columns={"class_id": "actual"})
+
+# Convert actual label to text
+labels["actual"] = labels["actual"].map({0: "control", 1: "dyslexic"})
+
+# ==============================
+# MERGE ALL
+# ==============================
+df = svm[["subject_id", "svm"]]
+df = df.merge(log[["subject_id", "logistic"]], on="subject_id")
+df = df.merge(cnn[["subject_id", "resnet"]], on="subject_id")
+df = df.merge(qnn[["subject_id", "qnn"]], on="subject_id")
+df = df.merge(labels[["subject_id", "actual"]], on="subject_id")
+
+# ==============================
+# SAVE CSV
+# ==============================
+df.to_csv("testing.csv", index=False)
+
+print("\n✅ testing.csv file created successfully!")
+print(df.head())

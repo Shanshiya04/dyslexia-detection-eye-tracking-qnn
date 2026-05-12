@@ -1,0 +1,15 @@
+subject_id,SVM,Logistic Regression,ResNet18,QNN,Actual value,Final Result
+1033,control,control,control,control,control,control
+1058,control,control,control,control,control,control
+1160,control,control,control,control,control,control
+1169,control,control,control,control,control,control
+1189,control,control,control,control,control,control
+1284,control,control,control,control,control,control
+1314,control,control,control,control,control,control
+1345,control,control,control,dyslexic,control,control
+1398,control,control,control,dyslexic,control,control
+1009,control,control,control,control,dyslexic,control
+1038,dyslexic,dyslexic,dyslexic,control,dyslexic,dyslexic
+1174,dyslexic,dyslexic,dyslexic,control,dyslexic,dyslexic
+1350,dyslexic,dyslexic,dyslexic,control,dyslexic,dyslexic
+1693,dyslexic,dyslexic,control,dyslexic,dyslexic,dyslexic

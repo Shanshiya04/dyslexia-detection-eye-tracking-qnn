@@ -1,0 +1,15 @@
+subject_id,svm,logistic,resnet,qnn,actual
+1033,control,control,control,dyslexic,control
+1058,dyslexic,control,control,dyslexic,control
+1160,control,control,control,dyslexic,control
+1169,control,control,control,dyslexic,control
+1189,control,control,control,dyslexic,control
+1284,control,control,control,dyslexic,control
+1314,control,control,control,dyslexic,control
+1345,control,control,control,dyslexic,control
+1398,control,control,control,dyslexic,control
+1009,control,control,control,dyslexic,dyslexic
+1038,dyslexic,dyslexic,dyslexic,dyslexic,dyslexic
+1174,control,control,dyslexic,dyslexic,dyslexic
+1350,dyslexic,dyslexic,dyslexic,dyslexic,dyslexic
+1693,dyslexic,dyslexic,control,dyslexic,dyslexic
